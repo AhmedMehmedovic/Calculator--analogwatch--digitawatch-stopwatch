@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    
+    <link type="text/css" rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="style.css">
+       
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="bg-primary" >
+    
+   
+   <div class="row">
+    <div class="col-12 col-md-8">      
+        <div class="container-fluid ">
+            <nav class="navbar py-3">
+                <button class="menuBtn" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                </button>
+                <a class="navbar-brand float-start p-2 " href="#">Calculator</a>
+                <button class="btn ms-auto" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                        <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                        <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                      </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="dropdown-menu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg></i></button>
+                  </div>
+                  <div class="offcanvas-body ">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Calculator</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/analogwatch/index.html">Analog watch</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Digital watch</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Stopwatch</a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </nav>
+                  <div class="row row-cols-1 w-auto ">
+                      <input class="h-100 bg-primary inputStyleTop" id="previousInput" data-previous="previousInput" readonly type="text" value=""></input>
+                      <input class="h-100 bg-primary inputStyle" id="currentInput" data-current="currentInput" readonly  type="text" value="" ></input>
+                  </div>
+            <div class="row ">
+                <div class="col-2  p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled" data-key="PageUp">MC</button>
+                </div>
+                <div class="col-2  p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled">MR</button>
+                </div>
+                <div class="col-2 p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled" data-key="Insert">M+</button>
+                </div>
+                <div class="col-2  p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled" data-key="Delete">M-</button>
+                </div>
+                <div class="col-2  p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled" data-key="Home">MS</button>
+                </div>
+                <div class="col-2  p-0"> 
+                    <button class="btn rounded-1 p-4 w-100 enabled" >M˘</button>
+                </div>
+            </div>               
+            <div class="row ">
+                <div class="col-3 rounded-1  p-0 "> 
+                    <div class="p-1">                        
+                    <button class="btn btn-secondary p-4 border w-100 fs-5 h-100 rounded-0" data-key="%">%</button>
+                    </div>
+                </div>
+                <div class="col-3  rounded-1 p-0 "> 
+                    <div class="p-1">
+                    <button class="btn  btn-secondary border  p-4 w-100 fs-5 h-100 rounded-0" data-key="Backspace">CE</button>
+
+                    </div>
+                </div>
+                <div class="col-3  rounded-1 p-0 "> 
+                    <div class="p-1">
+                        
+                    <button class="btn  btn-secondary  border p-4 w-100 fs-5 h-100 rounded-0" data-key="Delete">C</button>
+                    </div>
+
+                </div>
+                <div class="col-3  rounded-0 p-0 "> 
+                    <div class="p-1">
+                        <button class="btn  btn-secondary border  p-4 w-100 fs-5 h-100 rounded-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                            <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                            <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                          </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-3 p-0  rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn  btn-secondary border p-4 w-100 fs-5 h-100 rounded-1 enabled" data-key="PageDown">1/x</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-secondary border  p-4 w-100 fs-5 h-100 rounded-1 enabled" data-key="End">x2</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-secondary border btn-mycistp   p-4 w-100 fs-5 h-100 rounded-1 enabled " data-key="k">&#8730</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-secondary border  p-4 w-100 fs-5 h-100 rounded-1 enabled"data-key="/">&#247</button>
+
+                    </div>
+                </div>               
+            </div>
+            <div class="row ">
+                <div class="col-3 p-0   rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-info border btn-mycistp   p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="7" >7</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0   rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn border btn-info  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="8">8</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0   rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-info border  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="9" >9</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-secondary border  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="*">&#215</button>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row ">
+                <div class="col-3   rounded-0 p-0"> 
+                    <div class="p-1">
+                    <button class="btn btn-info border   p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="4">4</button>
+
+                    </div>
+                </div>
+                <div class="col-3   rounded-0 p-0"> 
+                    <div class="p-1 ">
+                        <button class="btn btn-info border  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="5">5</button>
+
+                    </div>
+                </div>
+                <div class="col-3   rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="6">6</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0   rounded-0"> 
+                    <div class="p-1">
+                        <button class="btn border btn-secondary  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="-">-</button>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row ">
+                <div class="col-3  rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="1">1</button>
+
+                    </div>
+                </div>
+                <div class="col-3 rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="2">2</button>
+
+                    </div>
+                </div>
+                <div class="col-3 rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="3">3</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0 btnsSign"> 
+                    <div class="p-1">
+                        <button class="btn btn-secondary border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="+">+</button>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row ">
+                <div class="col-3   rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="">&#177</button>
+
+                    </div>
+                </div>
+                <div class="col-3    rounded-0 p-0"> 
+                    <div class="p-1">
+                        <button class="btn btn-info border p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key="0">0</button>
+
+                    </div>
+                </div>
+                <div class="col-3   rounded-0 p-0"> 
+                    <div class="p-1 ">
+                        <button class="btn btn-info border  p-4 w-100 fs-4 h-100 rounded-1 enabled" data-key=",">.</button>
+
+                    </div>
+                </div>
+                <div class="col-3 p-0  rounded-0 "> 
+                    <div class="p-1  ">
+                        <button class="btn  border btn-light p-4 w-100 text-white fs-4 h-100 rounded-1 enabled" data-key="Enter">=</button>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4 d-none d-md-block">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="btn-group">                    
+                        <button>History</button>
+                        <button>Memory</button>
+                    </div>
+                        <input class="bg-info" type="text"></input>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+            
+
+    
+        
+<!-- <script>
+    document.querySelector("body").addEventListener("keyup", function(e) {
+        if(e.code.startsWith("Numpad") || e.code === e.key) { 
+            const element = document.querySelector('[data-key="'+e.key+'"]');
+            if(element) {
+                element.click();
+            } 
+        }
+    });
+
+    997
+    document.querySelector("body").addEventListener("click", function(e) {
+        console.log(e.target);
+    });
+</script> -->
+            
+          
+<script src="./operations.js"></script>
+<script src="./keyboard.js"></script>
+<script src="./display.js"></script>
+<script src="./script.js"></script>
+  </body>
+</html>
