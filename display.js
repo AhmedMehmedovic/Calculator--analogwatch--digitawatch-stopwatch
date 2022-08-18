@@ -29,7 +29,9 @@ class Display {
 
   addData(data, row = 0) {
     if (this.elements[0].value === "0") this.elements[0].value = "";
-    this.elements[row].value = this.#numberFormat(data, Number(data).countDecimals());
+    if (this.elements[row].value !== "") {
+      this.elements[row].value = this.#numberFormat(data, Number(data).countDecimals());
+    }
   }
 
   /**
@@ -45,7 +47,7 @@ class Display {
     }
   }
 
-  #numberFormat(number, decimals = 0, dec_point = ".", thousands_sep = ",") {
+  #numberFormat(number, decimals = 1, dec_point = ".", thousands_sep = ",") {
     // Strip all characters but numerical ones.
     number = (number + "").replace(/[^0-9+\-Ee.]/g, "");
     var n = !isFinite(+number) ? 0 : +number,

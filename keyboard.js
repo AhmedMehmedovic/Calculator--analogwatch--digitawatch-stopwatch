@@ -33,9 +33,9 @@ class KeyBoard {
 
         default:
           if (key) {
-            display.addData(1.5);
+            display.addData(key);
             if (keyType === "operation") {
-              operations.number1 = display.values[0];
+              //operations.number1 = display.values[0];
               console.log(operations);
             }
           }
